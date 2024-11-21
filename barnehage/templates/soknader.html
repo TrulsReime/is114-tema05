@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Oversikt over Alle Søknader</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Navn - Forelder 1</th>
+            <th>Navn - Forelder 2</th>
+            <th>Navn - Barn</th>
+            <th>Fortrinnsrett</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for soknad in soknader %}
+        <tr>
+            <td>{{ soknad.navn_forelder_1 }}</td>
+            <td>{{ soknad.navn_forelder_2 or 'Ikke oppgitt' }}</td>
+            <td>{{ soknad.navn_barn }}</td>
+            <td>{{ 'Ja' if soknad.fortrinnsrett else 'Nei' }}</td>
+            <td>{{ soknad.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="/">Tilbake til hovedsiden</a>
+{% endblock %}
