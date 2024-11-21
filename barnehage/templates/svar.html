@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
-<!-- Skriv inn din kode her for å returnere svar for bruksscenario om svar på en søknad. --> 
+
 {% block content %}
-<table border=1>
-	{% for k,v in data.items() %}
-	<tr>
-		<th>{{ k }}</th>
-		<td>{{ v }}</td>
-	</tr>
-	{% endfor %}
-</table>
+<h1>Søknadsresultat</h1>
+
+{% if status == "TILBUD" %}
+    <h2>Gratulerer!</h2>
+    <p> Du har fått plass i barnehagen.</p>
+{% elif status == "Fortrinnsrett, venter på ledig plass" %}
+    <h2>Fortrinnsrett</h2>
+    <p>Søknaden din har fortrinnsrett, men det er ikke noen ledige plasser. Du vil bli prioritert om det kommer en plass tilgjengelig.</p>
+    <p> Følg med på epost om en evt. ledig barnehage kommer.</p>
+{% else %}
+    <h2>Beklager!</h2>
+    <p>Vi har for øyeblikket ikke ledige plasser, og kan ikke tilby noen barnehageplass.</p>
+{% endif %}
+
+<a href="{{ url_for('index') }}">Tilbake til forsiden</a>
 {% endblock %}
