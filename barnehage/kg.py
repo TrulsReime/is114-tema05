@@ -55,14 +55,14 @@ def svar():
 @app.route('/commit')
 def commit():
     commit_all()
-    data_path = 'kgdata.xlsx'
+    data_path = 'kgdata1.xlsx'
     try:
         # Use openpyxl as the engine to read Excel files
         foresatte_df = pd.read_excel(data_path, sheet_name='foresatt', engine='openpyxl')
         barn_df = pd.read_excel(data_path, sheet_name='barn', engine='openpyxl')
         soknad_df = pd.read_excel(data_path, sheet_name='soknad', engine='openpyxl')
     except FileNotFoundError:
-        return "Feil: Excel-filen 'kgdata.xlsx' ble ikke funnet."
+        return "Feil: Excel-filen 'kgdata1.xlsx' ble ikke funnet."
     except Exception as e:
         return f"Feil ved lesing av Excel-filen: {e}"
 

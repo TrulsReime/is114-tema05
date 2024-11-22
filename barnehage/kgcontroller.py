@@ -145,7 +145,7 @@ def select_barn_by_id(barn_id):
 # ----- Persistent lagring ------
 def commit_all():
     """Skriver alle dataframes til excel"""
-    with pd.ExcelWriter('kgdata.xlsx', mode='a', if_sheet_exists='replace') as writer:  
+    with pd.ExcelWriter('kgdata1.xlsx', mode='a', if_sheet_exists='replace') as writer:  
         forelder.to_excel(writer, sheet_name='foresatt')
         barnehage.to_excel(writer, sheet_name='barnehage')
         barn.to_excel(writer, sheet_name='barn')
