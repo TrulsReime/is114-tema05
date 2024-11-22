@@ -3,15 +3,18 @@ import pandas as pd
 from kgmodel import Barnehage
 
 def initiate_db(db_name):
-    kg1 = Barnehage(1,"Riflegata Barnehage",50,15)
-    kg2 = Barnehage(2,"Sinsen Barnehage",25,2)
-    kg3 = Barnehage(3,"Espira Gartnerløkka Barnehage",35,4)
-    kg4 = Barnehage(4,"Seilduken Barnehage",12,0)
-    kg5 = Barnehage(5,"Petersborg Barnehage",15,5)
-    kg6 = Barnehage(6,"Hovin Barnehage",10,0)
-    kg7 = Barnehage(7,"Brobekk Barnehage",40,6)
+    kg1 = Barnehage(1,"Falkåsen Barnehage",25,12)
+    kg2 = Barnehage(2,"Grasmyr naturbarnehage",60,7)
+    kg3 = Barnehage(3,"Nustad Barnehage",30,5)
+    kg4 = Barnehage(4,"Rønholdt Barnehage",18,2)
+    kg5 = Barnehage(5,"Sunby Barnehage",18,6)
+    kg6 = Barnehage(6,"Uksodden Barnehage",15,4)
+    kg7 = Barnehage(7,"Stokkevannet Barnehage",45,8)
+    kg8 = Barnehage(8, "Grashoppa Barnehage", 35,4)
+    kg9 = Barnehage(9, "Solstua Barnehage", 24, 8)
+    kg10 = Barnehage(10, "Tiriltoppen Barnehage", 50, 9)
     
-    barnehage_liste = [kg1, kg2, kg3, kg4, kg5, kg6, kg7]
+    barnehage_liste = [kg1, kg2, kg3, kg4, kg5, kg6, kg7, kg8, kg9, kg10]
     
     
     kolonner_forelder =  ['foresatt_id',
@@ -54,8 +57,8 @@ def initiate_db(db_name):
 
 """
 b1 = Barn(1, "09012356472")
-    f1 = Foresatt(1, "Ole Nordmann", "Bekkeveien 100", "98434344", "09079089332")
-    f2 = Foresatt(2, "Solveig Imsdal", "Bekkeveien 100", "98434312", "09079233221")
+    f1 = Foresatt(1, "Olav Hansen", "Øvregate 22", "98434344", "09079089332")
+    f2 = Foresatt(2, "Siv Hansen", "Øvregate 22", "98434312", "09079233221")
 """
 
 
