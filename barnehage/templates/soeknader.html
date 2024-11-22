@@ -17,7 +17,7 @@
         {% for soknad in soknader %}
         <tr>
             <td>{{ soknad.navn_forelder_1 }}</td>
-            <td>{{ soknad.navn_forelder_2|default:'Ikke oppgitt' }}</td>
+            <td>{{ soknad.navn_forelder_2 or 'Ikke oppgitt' }}</td>
             <td>{{ soknad.navn_barn }}</td>
             <td>{{ 'Ja' if soknad.fortrinnsrett else 'Nei' }}</td>
             <td>{{ soknad.status }}</td>
@@ -26,5 +26,5 @@
     </tbody>
 </table>
 
-<p><a href="/">Tilbake til hovedsiden</a></p>
+<a href="/">Tilbake til hovedsiden</a>
 {% endblock %}
